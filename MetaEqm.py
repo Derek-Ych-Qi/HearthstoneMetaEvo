@@ -42,4 +42,6 @@ if __name__ == "__main__":
     cur_meta = rdg.GenRandomMeta(N_CLASS)
 
     eqm_meta = solve_meta_eqm(winrate_mat)
+    ewin = np.dot(winrate_mat, eqm_meta)
     print(eqm_meta)
+    print(ewin)

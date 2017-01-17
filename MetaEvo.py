@@ -34,7 +34,7 @@ def meta_evo(winrate_mat, cur_meta, tol):
             print("max iter reached, no results found.")
             print(ewinrate)
             return new_meta, dif
-    return new_meta, dif
+    return new_meta, ewinrate
 
 
 if __name__ == "__main__":
@@ -58,5 +58,6 @@ if __name__ == "__main__":
 
     ewinrate = np.dot(winrate_mat, cur_meta)
 
-    new_meta, dif = meta_evo(winrate_mat, cur_meta, 10 ** -2)
+    new_meta, ewinrate = meta_evo(winrate_mat, cur_meta, 10 ** -2)
     print(new_meta)
+    print(ewinrate)
